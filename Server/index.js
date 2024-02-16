@@ -8,7 +8,8 @@ const app = express()
 app.use(cors())
 app.use(express.json()) //whenever we pass the data it converts to json format.
 
-mongoose.connect("mongodb://127.0.0.1:27017/TodoApp")
+// mongoose.connect("mongodb://127.0.0.1:27017/TodoApp")
+mongoose.connect("mongodb+srv://admin:omer2626@usersample.dyei8on.mongodb.net/TodoApp?retryWrites=true&w=majority")
 
 
 //to fetch all the records
