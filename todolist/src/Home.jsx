@@ -11,12 +11,12 @@ const Home = () => {
         setFlag(!flag);
     }
     useEffect(() => {
-        axios.get("http://localhost:3002/get")
+        axios.get("https://my-todo-fejs.onrender.com/get")
             .then(result => setTodos(result.data))
             .catch(err => console.log(err))
     }, [flag])
 const handleEdit =(id)=>{
-    axios.put("http://localhost:3002/update/" + id)
+    axios.put("https://my-todo-fejs.onrender.com/update/" + id)
     .then(result => {
         // location.reload()
         changeFlag()
@@ -25,7 +25,7 @@ const handleEdit =(id)=>{
 }
 
 const handleDelete = (id)=>{
-    axios.delete('http://localhost:3002/delete/'+ id)
+    axios.delete('https://my-todo-fejs.onrender.com/delete/'+ id)
     .then(result => {
         // location.reload()
         changeFlag()
@@ -37,7 +37,7 @@ const handleDelete = (id)=>{
     return (
         <>
             <article className="home">
-                <h1> Todo List  --- 15-02-2024 </h1>
+                <h1> TODO LIST </h1>
                 <Create changeFlag={changeFlag}></Create>
                 {
                     todos.length === 0

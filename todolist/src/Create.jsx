@@ -6,7 +6,7 @@ import axios from "axios"
 const Create=({changeFlag})=>{
     const [task, setTask] = useState()
     const handleAdd=()=>{
-        axios.post("http://localhost:3002/add", {task:task})
+        axios.post("https://my-todo-fejs.onrender.com/add", {task:task})
         .then(result => {
             // location.reload()
             setTask("");
